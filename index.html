@@ -8,10 +8,24 @@
   </head>
   <body>
     <main class="page">
-      <h1>Ruby's World</h1>
-      <p class="lede">A minimal page with HTML, CSS, and JavaScript.</p>
-      <button type="button" class="btn" id="greet-btn">Say hi</button>
-      <p id="message" class="message" aria-live="polite" hidden></p>
+      <h1>Welcome to Ruby's World</h1>
+
+      <section class="photo-section" aria-label="Photo of Ruby the bird">
+        <img class="hero-photo" src="ruby.jpg" alt="Ruby, a bird" />
+      </section>
+
+      <section class="treat-widget" aria-labelledby="treat-widget-heading">
+        <h2 id="treat-widget-heading" class="treat-widget-title">
+          Ruby treat counter
+        </h2>
+        <p class="treat-date" id="treat-date"></p>
+        <p class="treat-count">
+          Treats today: <strong id="treat-count">0</strong>
+        </p>
+        <button type="button" class="btn" id="treat-btn">
+          I gave Ruby a treat
+        </button>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>
