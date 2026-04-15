@@ -1,0 +1,17 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Sample south trail" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-122.45, 37.76],
+          [-122.438, 37.752],
+          [-122.428, 37.745]
+        ]
+      }
+    }
+  ]
+}

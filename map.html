@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map — Ruby's World</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="map-page">
+    <header class="map-toolbar">
+      <a class="map-toolbar-home" href="index.html">← Home</a>
+      <form class="map-search-form" id="search-form" role="search">
+        <label class="visually-hidden" for="search-input">Search for a place</label>
+        <input
+          type="search"
+          id="search-input"
+          name="q"
+          class="map-search-input"
+          placeholder="Search for a place…"
+          autocomplete="off"
+        />
+        <button type="submit" class="btn map-search-btn">Search</button>
+      </form>
+      <div class="map-toolbar-routes">
+        <label class="map-file-label">
+          <span class="map-file-label-text">Add routes (GeoJSON)</span>
+          <input
+            type="file"
+            id="route-files"
+            class="visually-hidden"
+            accept=".json,.geojson,application/geo+json"
+            multiple
+          />
+        </label>
+      </div>
+    </header>
+    <p class="map-search-status" id="search-status" role="status" aria-live="polite"></p>
+    <div id="map" class="map-container" role="application" aria-label="Map"></div>
+    <footer class="map-footer">
+      <p class="map-attribution">
+        ©
+        <a href="https://www.openstreetmap.org/copyright" rel="noopener noreferrer"
+          >OpenStreetMap</a
+        >
+        contributors · Search:
+        <a href="https://nominatim.org/" rel="noopener noreferrer">Nominatim</a>
+      </p>
+    </footer>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="map.js"></script>
+  </body>
+</html>

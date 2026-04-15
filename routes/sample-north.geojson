@@ -1,0 +1,17 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Sample north trail" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-122.498, 37.819],
+          [-122.485, 37.825],
+          [-122.472, 37.831]
+        ]
+      }
+    }
+  ]
+}
