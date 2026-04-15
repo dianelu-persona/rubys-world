@@ -29,7 +29,7 @@ Then open **http://localhost:8080/** for the home page and **http://localhost:80
 
 ## Map: tiles, search, and data
 
-- **Basemap:** [OpenStreetMap](https://www.openstreetmap.org/copyright) tiles (attribution shown on the map).
+- **Basemap:** [CARTO](https://carto.com/attributions) raster tiles (OSM data; attribution on the map). We avoid hotlinking `tile.openstreetmap.org` directly because OSM’s public tile servers often error or block third-party sites; Leaflet still needs *some* tile URL.
 - **Search:** [Nominatim](https://nominatim.org/) (OpenStreetMap’s search). Use the search box and press **Search** or **Enter**. Requests are throttled to stay within [fair-use guidelines](https://operations.osmfoundation.org/policies/nominatim/); do not automate high-volume queries.
 - **Hiking routes:** [GeoJSON](https://geojson.org/) files. Shipped routes live in **`routes/`** and are listed in **`map.js`** (`STATIC_ROUTE_URLS`). You can add more files to that folder and append their paths there. Use **`FeatureCollection`** or a single **`Feature`**; line routes are usually **`LineString`** / **`MultiLineString`**; include a **`name`** (or **`title`**) in **`properties`** for popups.
 

@@ -26,11 +26,16 @@
     zoomControl: true,
   }).setView(DEFAULT_CENTER, DEFAULT_ZOOM);
 
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(map);
+  /* OSM’s own tile server often blocks or errors on embedded sites; CARTO hosts OSM-derived tiles for Leaflet use. */
+  L.tileLayer(
+    "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
+    {
+      maxZoom: 20,
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: "abcd",
+    }
+  ).addTo(map);
 
   const routeLayers = [];
 
